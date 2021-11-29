@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Hotel App</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_roombooking">Room Booking</string>
+    <string name="title_statistic">Statistic</string>
+    <string name="title_userinfo">User Info</string>
+    <string name="title_personal">Personal</string>
+    <string name="title_service">Room Service</string>
+    <string name="title_language">Language</string>
+    <string name="change_info">Change Information</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
