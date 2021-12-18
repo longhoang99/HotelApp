@@ -31,6 +31,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var dialog: AlertDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_register)
         dialog = SpotsDialog.Builder().setContext(this).setCancelable(false).build()
         edtEmail = findViewById(R.id.edt_email)
@@ -47,7 +48,7 @@ class RegisterActivity : AppCompatActivity() {
             userModel.fullname = edtFullName!!.text.toString().trim()
             userModel.password = edtPassword!!.text.toString().trim()
             userModel.phone = edtPhone!!.text.toString().trim()
-            userModel.isAdmin = 1
+            userModel.position = "1"
             if (TextUtils.isEmpty(userModel.username) || TextUtils.isEmpty(userModel.email) || TextUtils.isEmpty(userModel.fullname) || TextUtils.isEmpty(
                     userModel.password
                 ) || TextUtils.isEmpty(userModel.phone)
@@ -75,7 +76,7 @@ class RegisterActivity : AppCompatActivity() {
                             params["email"] = userModel.email!!
                             params["phone"] = userModel.phone!!
                             params["password"] = userModel.password!!
-                            params["isadmin"] = userModel.isAdmin.toString()
+                            params["position"] = userModel.position!!
                             return params
                         }
                     }

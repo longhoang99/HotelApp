@@ -1,10 +1,17 @@
 package com.example.hotelapp
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.FragmentManager
+import com.example.hotelapp.common.Common
+import com.example.hotelapp.ui.personal.PersonalFragment
+import com.example.hotelapp.ui.service.ServiceFragment
+import com.example.hotelapp.ui.userinfo.UserInfoFragment
+import com.example.yummy.ui.favorite.RoomFragment
+import java.lang.StringBuilder
 
 class MainActivity : AppCompatActivity() {
     private var cardRoom: CardView?= null
@@ -13,15 +20,22 @@ class MainActivity : AppCompatActivity() {
     private var cardUserInfo: CardView?= null
     private var cardLanguage: CardView?= null
     private var cardPersonal: CardView?= null
+    private var tvUserName: TextView?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
         init()
+
         cardRoom!!.setOnClickListener {
-            Toast.makeText(this, "Coming Soon!!", Toast.LENGTH_SHORT).show()
+            val roomFragment = RoomFragment()
+            val fragmentManager: FragmentManager = supportFragmentManager
+            fragmentManager.beginTransaction().add(R.id.main_layout, roomFragment).addToBackStack(null).commit();
         }
         cardService!!.setOnClickListener {
-            Toast.makeText(this, "Coming Soon!!", Toast.LENGTH_SHORT).show()
+            val serviceFragment = ServiceFragment()
+            val fragmentManager: FragmentManager = supportFragmentManager
+            fragmentManager.beginTransaction().add(R.id.main_layout, serviceFragment).addToBackStack(null).commit();
         }
         cardStatistic!!.setOnClickListener {
             Toast.makeText(this, "Coming Soon!!", Toast.LENGTH_SHORT).show()
@@ -30,10 +44,19 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Coming Soon!!", Toast.LENGTH_SHORT).show()
         }
         cardUserInfo!!.setOnClickListener {
-            Toast.makeText(this, "Coming Soon!!", Toast.LENGTH_SHORT).show()
+            val userInfoFragment = UserInfoFragment()
+            val fragmentManager: FragmentManager = supportFragmentManager
+            fragmentManager.beginTransaction().add(R.id.main_layout, userInfoFragment).addToBackStack(null).commit();
         }
         cardPersonal!!.setOnClickListener {
-            Toast.makeText(this, "Coming Soon!!", Toast.LENGTH_SHORT).show()
+            if(Common.currentUser?.position == "Manager") {
+                val personalFragment = PersonalFragment()
+                val fragmentManager: FragmentManager = supportFragmentManager
+                fragmentManager.beginTransaction().add(R.id.main_layout, personalFragment)
+                    .addToBackStack(null).commit();
+            }else{
+                Toast.makeText(this, "Sorry! You don't have permission to access this", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -44,5 +67,8 @@ class MainActivity : AppCompatActivity() {
         cardLanguage = findViewById(R.id.card_language)
         cardUserInfo = findViewById(R.id.card_userinfo)
         cardPersonal = findViewById(R.id.card_personal)
+        tvUserName = findViewById(R.id.txt_username)
+        tvUserName!!.text = StringBuilder("Welcome, "+ Common.currentUser!!.username)
     }
+
 }

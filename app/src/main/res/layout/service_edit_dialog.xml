@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_serviceName"
+        android:hint="service name"
+        android:textSize="24sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_servicePrice"
+        android:hint="price (1000vnd)"
+        android:textSize="24sp"
+        android:inputType="number"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_cancel"
+            android:text="CANCEL"
+            android:background="@drawable/custom_button"
+            android:layout_marginEnd="100dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_ok"
+            android:text="OK"
+            android:background="@drawable/custom_button"/>
+    </LinearLayout>
+
+</LinearLayout>

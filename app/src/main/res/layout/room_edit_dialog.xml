@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_room_id"
+        android:hint="Edit Room"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_size"
+        android:hint="size"
+        android:textSize="24sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/room_style"
+        android:textSize="20sp" />
+    <RadioGroup
+        android:id="@+id/rdi_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Single Room"
+            android:textSize="15sp"
+            android:id="@+id/rdi_single"
+            android:checked="true"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Double Room"
+            android:textSize="15sp"
+            android:id="@+id/rdi_double"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Twin Room"
+            android:textSize="15sp"
+            android:id="@+id/rdi_twin"/>
+    </RadioGroup>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_note"
+        android:hint="note"
+        android:textSize="24sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_price"
+        android:hint="price (1000vnd)"
+        android:textSize="24sp"
+        android:inputType="number"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="50dp">
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_cancel"
+            android:text="CANCEL"
+            android:background="@drawable/custom_button"
+            android:layout_marginEnd="100dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_ok"
+            android:text="OK"
+            android:background="@drawable/custom_button"/>
+    </LinearLayout>
+
+</LinearLayout>

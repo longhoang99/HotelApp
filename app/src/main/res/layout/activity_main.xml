@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main_layout"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,45 +13,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="8dp"
-        android:text="Hotel Management"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/aclonica"
+        android:text="Hotel Management"
         android:textColor="#606060"
         android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:textStyle="bold" />
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginBottom="20dp">-->
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:text="Welcome, "-->
-<!--        android:textColor="#838383"-->
-<!--        android:textSize="24sp"-->
-<!--        android:textStyle="bold" />-->
-<!--    <TextView-->
-<!--        android:id="@+id/txt_username"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:text="Username"-->
-<!--        android:textColor="#838383"-->
-<!--        android:textSize="24sp"-->
-<!--        android:textStyle="italic" />-->
-<!--    </LinearLayout>-->
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+    <TextView
+        android:id="@+id/txt_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/txt_header"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/aclonica"
+        android:text="welcome, username"
+        android:textColor="#606060"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_header"/>
+    <GridLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/txt_username"
         android:columnCount="2"
-        android:rowCount="3">
+        android:rowCount="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_username">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_room"
@@ -61,7 +57,7 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:layout_margin="8dp"
+            android:layout_margin="20dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
@@ -82,8 +78,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/title_roombooking"
                     android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -96,10 +92,7 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_margin="20dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
@@ -120,8 +113,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/title_statistic"
                     android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -134,10 +127,7 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_margin="20dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
@@ -158,8 +148,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/title_service"
                     android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -172,10 +162,7 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_margin="20dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
@@ -196,8 +183,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/title_language"
                     android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -210,10 +197,7 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_margin="20dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
@@ -234,8 +218,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/title_userinfo"
                     android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -248,10 +232,7 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_margin="20dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
@@ -272,11 +253,9 @@
                     android:layout_height="wrap_content"
                     android:text="@string/title_personal"
                     android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-
     </GridLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

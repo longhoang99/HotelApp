@@ -3,22 +3,65 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/custom_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/custom_button.xml" value="0.2203125" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/custom_button2.xml" value="0.2203125" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/ic_baseline_add_24_white.xml" value="0.2203125" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/ic_baseline_edit_24_white.xml" value="0.2203125" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/ic_baseline_info_24_white.xml" value="0.2203125" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/ic_baseline_insights_24.xml" value="0.1" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout-large/item_room.xml" value="0.153125" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout-normal/item_room.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/add_customer_info_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/available_room_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/booked_room_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/customer_add_info_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/customer_info_dialog.xml" value="0.22" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_available_room.xml" value="0.25" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_booked_room.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_home.xml" value="0.15" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_notifications.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_personal.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_room.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_room_list.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_service.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_service_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_statistics.xml" value="0.15" />
-        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_user_info.xml" value="0.25" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_user_info.xml" value="0.22" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/fragment_userinfo.xml" value="0.1" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/item_room.xml" value="0.25" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/item_room_service.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/item_service.xml" value="0.25" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/item_service_add.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/item_user.xml" value="0.25" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/personal_add_info_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/personal_add_user_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/personal_edit_info_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/personal_info_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/recyclerview.xml" value="0.22" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/room_add_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/room_edit_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/room_info_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/room_service_bottom_sheet.xml" value="0.22" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/room_service_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/service_book_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/service_edit_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/service_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/user_edit_info_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/layout/user_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/menu/room_menu.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/NhatsonPC/AndroidStudioProjects/HotelApp/app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>
     </option>

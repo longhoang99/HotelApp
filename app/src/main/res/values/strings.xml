@@ -4,11 +4,27 @@
     <string name="title_home">Home</string>
     <string name="title_roombooking">Room Booking</string>
     <string name="title_statistic">Statistic</string>
-    <string name="title_userinfo">User Info</string>
+    <string name="title_userinfo">User Information</string>
     <string name="title_personal">Personal</string>
     <string name="title_service">Room Service</string>
     <string name="title_language">Language</string>
-    <string name="change_info">Change Information</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="edit_info">Change Info</string>
+    <string name="available_room">Available Room</string>
+    <string name="user_list">User List</string>
+    <string name="service_list">Service List</string>
+    <string name="service_add">Add Service</string>
+    <string name="booked_room">Room Booked</string>
+    <string name="room_info">Room Information</string>
+    <string name="customer_info">Customer Information</string>
+    <string name="room_number">Room Number</string>
+    <string name="service_name">Service Name</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_book">Add to booked room</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_add">Add new room</string>
+    <string name="room_style">Room Style:</string>
+    <string name="user_position">Position:</string>
+    <string name="staff">Staff</string>
+    <string name="manager">Manager</string>
 </resources>

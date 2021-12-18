@@ -16,19 +16,24 @@ import com.android.volley.Response
 import com.android.volley.VolleyError
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.hotelapp.common.Common
+import com.example.hotelapp.model.RoomModel
 import com.example.hotelapp.model.UserModel
 import dmax.dialog.SpotsDialog
+import org.json.JSONArray
+import org.json.JSONObject
 
 class LoginActivity : AppCompatActivity() {
     private var edtUserName: EditText? = null
     private var edtPassword: EditText? = null
-
     private var btnLogin: Button? = null
     private var tvSignup: TextView? = null
     private val URL = "http://10.0.2.2:8080/hotel_app/login.php"
+    private val getUserURL = "http://10.0.2.2:8080/hotel_app/userInfo.php"
     private lateinit var dialog: AlertDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_login)
         dialog = SpotsDialog.Builder().setContext(this).setCancelable(false).build()
         edtUserName = findViewById(R.id.edt_username)
@@ -51,8 +56,10 @@ class LoginActivity : AppCompatActivity() {
                 val stringRequest =
                     object : StringRequest(Method.POST, URL, Response.Listener{ response: String ->
                         if (response.equals("Login Success")) {
-                            startActivity(Intent(this, MainActivity::class.java))
-                            finish()
+                            Common.currentUser = getUserModel(userModel)
+                            if (Common.currentUser!= null) {
+                                startActivity(Intent(this, MainActivity::class.java))
+                            }else Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
                         } else {
                             Toast.makeText(this, "Login Failed:\n$response", Toast.LENGTH_SHORT).show()
                         }
@@ -77,7 +84,33 @@ class LoginActivity : AppCompatActivity() {
                     RegisterActivity::class.java
                 )
             )
-            finish()
         }
+    }
+
+    private fun getUserModel(userModel: UserModel): UserModel {
+        val stringRequest =
+            object : StringRequest(Method.POST, getUserURL, Response.Listener{ response: String ->
+                val userInfo: JSONArray = JSONArray(response)
+                val user: JSONObject = userInfo.getJSONObject(0)
+                userModel.userId = Integer.parseInt(user.getString("userId"))
+                userModel.username = user.getString("username")
+                userModel.fullname = user.getString("fullname")
+                userModel.birthday = user.getString("birthday")
+                userModel.sex = user.getString("sex")
+                userModel.email = user.getString("email")
+                userModel.phone = user.getString("phone")
+                userModel.position = user.getString("position")
+            }, Response.ErrorListener { error: VolleyError? ->
+                Toast.makeText(this, "" + error!!.message, Toast.LENGTH_SHORT).show()
+            }) {
+                override fun getParams(): Map<String, String> {
+                    val params = HashMap<String, String>()
+                    params["username"] = userModel.username!!
+                    return params
+                }
+            }
+        val requestQueue: RequestQueue = Volley.newRequestQueue(this)
+        requestQueue.add(stringRequest)
+        return userModel
     }
 }
