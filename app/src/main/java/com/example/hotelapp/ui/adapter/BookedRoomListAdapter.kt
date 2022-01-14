@@ -87,6 +87,7 @@ class BookedRoomListAdapter(private val context: Context, private val BookedRoom
         dialogView.findViewById<Button>(R.id.btn_ok).setOnClickListener {
             infoDialog.dismiss()
         }
+        dialogView.findViewById<Button>(R.id.btn_pay).visibility = INVISIBLE
     }
 
 

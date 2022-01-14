@@ -40,6 +40,10 @@ class LoginActivity : AppCompatActivity() {
         edtPassword = findViewById(R.id.edt_password)
         btnLogin = findViewById(R.id.btn_login)
         tvSignup = findViewById(R.id.tv_signup)
+        if (Common.currentUser != null){
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
         btnLogin!!.setOnClickListener {
             val userModel = UserModel()
             userModel.username = edtUserName!!.text.toString().trim()
@@ -59,6 +63,7 @@ class LoginActivity : AppCompatActivity() {
                             Common.currentUser = getUserModel(userModel)
                             if (Common.currentUser!= null) {
                                 startActivity(Intent(this, MainActivity::class.java))
+                                finish()
                             }else Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
                         } else {
                             Toast.makeText(this, "Login Failed:\n$response", Toast.LENGTH_SHORT).show()

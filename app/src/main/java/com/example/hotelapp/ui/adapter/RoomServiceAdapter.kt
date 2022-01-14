@@ -2,12 +2,15 @@ package com.example.hotelapp.ui.adapter
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.RequestQueue
@@ -18,6 +21,7 @@ import com.android.volley.toolbox.Volley
 import com.example.hotelapp.R
 import com.example.hotelapp.model.RoomModel
 import com.example.hotelapp.model.ServiceModel
+import com.example.hotelapp.ui.service.Pay_Activity
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import org.json.JSONArray
 import org.json.JSONObject
@@ -25,6 +29,7 @@ import java.util.ArrayList
 
 class RoomServiceAdapter(private val context: Context, private val bookedList: MutableList<RoomModel>): RecyclerView.Adapter<RoomServiceAdapter.BookedListViewHolder>() {
 
+    private val updateOrderURL = "http://10.0.2.2:8080/hotel_app/updateOrder.php"
     private val roomServiceURL = "http://10.0.2.2:8080/hotel_app/roomServiceInfo.php"
     private val getInfoURL = "http://10.0.2.2:8080/hotel_app/customerInfo.php"
     private val serviceURL = "http://10.0.2.2:8080/hotel_app/serviceList.php"
@@ -130,6 +135,39 @@ class RoomServiceAdapter(private val context: Context, private val bookedList: M
         requestQueue2.add(stringRequest2)
         val infoDialog = builder.show()
         dialogView.findViewById<Button>(R.id.btn_ok).setOnClickListener {
+            infoDialog.dismiss()
+        }
+        dialogView.findViewById<Button>(R.id.btn_pay).setOnClickListener {
+            val stringRequest3 =
+                object : StringRequest(Method.POST, updateOrderURL, Response.Listener { response: String ->
+                    val info: JSONArray = JSONArray(response)
+                    var name: String=""
+                    var roomPrice: Float = 0.0F
+                    var serviceName: String=""
+                    var servicePrice: Float=0.0F
+                    for(i: Int in 0 until info.length()){
+                        name = info.getJSONObject(i).getString("name")
+                        roomPrice = info.getJSONObject(i).getString("roomPrice").toDouble().toFloat()
+                        serviceName += info.getJSONObject(i).getString("serviceName").plus(",")
+                        servicePrice += info.getJSONObject(i).getString("servicePrice").toDouble().toFloat()
+                    }
+                    val intent= Intent(context, Pay_Activity::class.java)
+                    intent.putExtra("name", name)
+                    intent.putExtra("roomId", roomModel.id.toString())
+                    intent.putExtra("serviceName", serviceName)
+                    intent.putExtra("totalPrice", (roomPrice+servicePrice).toString())
+                    context.startActivity(intent)
+                }, Response.ErrorListener { error: VolleyError? ->
+                    Toast.makeText(context, "" + error!!.message, Toast.LENGTH_SHORT).show()
+                }) {
+                    override fun getParams(): Map<String, String> {
+                        val params = HashMap<String, String>()
+                        params["id"] = roomModel.id.toString()
+                        return params
+                    }
+                }
+            val requestQueue3: RequestQueue = Volley.newRequestQueue(context)
+            requestQueue3.add(stringRequest3)
             infoDialog.dismiss()
         }
     }

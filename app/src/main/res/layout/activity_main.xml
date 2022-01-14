@@ -14,12 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/aclonica"
         android:text="Hotel Management"
         android:textColor="#606060"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textStyle="bold" />
 
@@ -29,14 +29,26 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_header"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/aclonica"
         android:text="welcome, username"
         android:textColor="#606060"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_header"/>
+    <ImageView
+        android:id="@+id/img_logout"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_logout_24"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_header"
+        />
+
     <GridLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -154,7 +166,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_language"
+            android:id="@+id/card_bill"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -176,12 +188,12 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/ic_baseline_language_24" />
+                    android:src="@drawable/ic_baseline_bill_24" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/title_language"
+                    android:text="@string/title_bill"
                     android:textAlignment="center"
                     android:textSize="18sp"
                     android:textStyle="bold" />
